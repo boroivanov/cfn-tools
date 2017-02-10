@@ -72,3 +72,6 @@ Credits
 =======
   
 Huge thanks to `@stefansundin`_ and  `@dstokes`_
+
+.. _`@stefansundin`: https://github.com/stefansundin
+.. _`@dstokes`: https://github.com/dstokes
