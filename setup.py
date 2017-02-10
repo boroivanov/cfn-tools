@@ -7,7 +7,7 @@ requirements = [
 
 setuptools.setup(
     name="cfn-tools",
-    version="0.1.0",
+    version="0.1.2",
     url="https://github.com/boroivanov/cfn-tools",
 
     author="Borislav Ivanov",
