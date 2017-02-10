@@ -67,3 +67,8 @@ Validate a template:
 .. code:: bash
 
   cfn-tools validate TEMPLATE
+  
+Credits
+=======
+  
+Huge thanks to `@stefansundin`_ and `@dstokes`_
