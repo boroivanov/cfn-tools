@@ -71,4 +71,4 @@ Validate a template:
 Credits
 =======
   
-Huge thanks to `@stefansundin`_ and `@dstokes`_
+Huge thanks to @stefansundin and @dstokes
