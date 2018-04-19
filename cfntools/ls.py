@@ -105,8 +105,4 @@ def ls(name, filter, profile, region):
         elif s['StackStatus'].startswith('DELETE_') is True:
             format_listing(s, 'DeletionTime')
         else:
-            print status_map[s['StackStatus']], s['StackName']
-
-
-if __name__ == '__main__':
-    ls()
+            click.echo(status_map[s['StackStatus']], s['StackName'])
