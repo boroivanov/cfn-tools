@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import click
-from cfntools import __version__
+
 from ls import ls
 from diff import diff
 from validate import validate
 
+version = '0.1.2'
+
 
 @click.group()
-@click.version_option(version=__version__)
+@click.version_option(version=version, message=version)
 def main(args=None):
     """Tools for AWS CloudFormation
 
@@ -16,6 +18,7 @@ def main(args=None):
        cfn-tools --help
        cfn-tools <command> --help
     """
+
 
 main.add_command(ls)
 main.add_command(diff)

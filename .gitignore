@@ -30,3 +30,6 @@ nosetests.xml
 # Python virtual environments
 py2/**
 py3/**
+
+# Editors
+.vscode/
