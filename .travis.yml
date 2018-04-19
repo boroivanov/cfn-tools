@@ -5,9 +5,7 @@ python: 2.7
 notifications:
   email: false
 
-install: pip install -r requirements.txt
-
-script: pytest
+script: echo Tests go here.
 
 deploy:
   provider: pypi
