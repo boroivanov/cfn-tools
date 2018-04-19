@@ -1,5 +1,8 @@
+import sys
 import boto3
 import click
+
+from botocore.exceptions import ClientError
 
 
 status_map = {
@@ -34,15 +37,15 @@ def get_stacks(client, filters):
             response = client.list_stacks(
                 NextToken=response['NextToken'], StackStatusFilter=filters)
             stacks += response['StackSummaries']
-    except Exception as e:
-        print e
-    else:
         return stacks
+    except ClientError as e:
+        click.echo(e.response["Error"]["Message"])
+        sys.exit(1)
 
 
 def get_filters(filter):
     """Returns a list of filtered stack status codes"""
-    if filter is None:
+    if filter is None or 'COMPLETE' in filter.upper():
         return [k for k in status_map.keys() if 'DELETE_' not in k]
     elif filter.startswith('!') is True:
         return [k for k in status_map.keys() if filter[1:].upper() not in k and 'DELETE_' not in k]
