@@ -56,15 +56,15 @@ def get_filters(filter):
 def list_codes(ctx, param, value):
     if not value or ctx.resilient_parsing:
         return
-    for k, v in sorted(status_map.iteritems()):
-        print('{0:>4} {1}'.format(v, k))
+    for k, v in sorted(status_map.items()):
+        click.echo('{0:>4} {1}'.format(v, k))
     ctx.exit()
 
 
 def format_listing(stack, time_label):
     s = stack
-    print('{0:<20} {1:<4} {2}'.format(
-        s[time_label].strftime("%Y-%m-%d %H:%M:%S"), status_map[s['StackStatus']], s['StackName']))
+    click.echo('{0:<18} {1:<4} {2}'.format(
+        s[time_label].strftime("%Y-%m-%d %H:%M"), status_map[s['StackStatus']], s['StackName']))
 
 
 @click.command(short_help='List stacks')

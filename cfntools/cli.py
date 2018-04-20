@@ -2,9 +2,9 @@
 
 import click
 
-from ls import ls
-from diff import diff
-from validate import validate
+from cfntools.ls import ls
+from cfntools.diff import diff
+from cfntools.validate import validate
 
 version = '0.1.3'
 

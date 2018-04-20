@@ -4,7 +4,8 @@ import botocore
 import click
 import json
 import difflib
-from validate import validate_template
+
+from cfntools.validate import validate_template
 
 
 def get_template(client, stack):
