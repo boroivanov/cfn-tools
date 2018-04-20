@@ -6,7 +6,7 @@ from cfntools.ls import ls
 from cfntools.diff import diff
 from cfntools.validate import validate
 
-version = '0.1.3'
+version = '0.1.4'
 
 
 @click.group()
