@@ -98,11 +98,9 @@ def ls(name, filter, profile, region):
         stacks = [k for k in stacks if name in k['StackName']]
 
     for s in stacks:
-        if s['StackStatus'].startswith('CREATE_') is True:
-            format_listing(s, 'CreationTime')
-        elif s['StackStatus'].startswith('UPDATE_') is True:
+        if 'LastUpdatedTime' in s:
             format_listing(s, 'LastUpdatedTime')
-        elif s['StackStatus'].startswith('DELETE_') is True:
+        elif 'DeletionTime' in s:
             format_listing(s, 'DeletionTime')
         else:
-            click.echo(status_map[s['StackStatus']], s['StackName'])
+            format_listing(s, 'CreationTime')
