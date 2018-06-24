@@ -9,6 +9,10 @@ cfn-tools
    :target: https://travis-ci.org/boroivanov/cfn-tools
    :alt: Latest Travis CI build status
 
+.. image:: https://api.codeclimate.com/v1/badges/cb9807409eafbb28047a/maintainability
+   :target: https://codeclimate.com/github/boroivanov/cfn-tools/maintainability
+   :alt: Maintainability
+
 
 * GitHub: https://github.com/boroivanov/cfn-tools
 * PyPI: https://pypi.python.org/pypi/cfn-tools
